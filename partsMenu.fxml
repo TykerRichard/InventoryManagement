@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="partsController">
+   <children>
+      <RadioButton id="inHouse" layoutX="169.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#inhouseScene" selected="true" text="In-House">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="partType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="outsourced" fx:id="outsourced" layoutX="351.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#outsourcedScene" selected="true" text="Outsourced" toggleGroup="$partType">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="51.0" layoutY="47.0" prefHeight="27.0" prefWidth="99.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label id="idLabel" fx:id="idLabel" layoutX="99.0" layoutY="150.0" text="ID:" />
+      <Label id="nameLabel" layoutX="76.0" layoutY="199.0" text="Name:" />
+      <Label id="invLabel" layoutX="87.0" layoutY="255.0" text="Inv:" />
+      <Label id="mfgSourceLabel" fx:id="mfgSourceLabel" layoutX="29.0" layoutY="437.0" text="Company Name:" />
+      <Label id="maxLabel" layoutX="79.0" layoutY="373.0" text="Max:" />
+      <Label id="priceLabel" layoutX="42.0" layoutY="314.0" text="Price / Cost:" />
+      <Label id="minLabel" layoutX="300.0" layoutY="373.0" text="Min:" />
+      <TextField disable="true" editable="false" layoutX="128.0" layoutY="146.0" text="Auto Gen- Disabled" />
+      <TextField id="nameField" fx:id="nameField" layoutX="128.0" layoutY="195.0" />
+      <TextField id="invField" fx:id="invField" layoutX="128.0" layoutY="251.0" />
+      <TextField id="costField" fx:id="costField" layoutX="128.0" layoutY="310.0" />
+      <TextField id="maxField" fx:id="maxField" layoutX="128.0" layoutY="369.0" />
+      <TextField id="machineIDField" fx:id="machineIDField" layoutX="128.0" layoutY="433.0" visible="false" />
+      <TextField id="mfgField" fx:id="mfgField" layoutX="128.0" layoutY="433.0" />
+      <TextField id="minField" fx:id="minField" layoutX="345.0" layoutY="369.0" />
+      <Button id="saveButton" fx:id="saveButton" layoutX="328.0" layoutY="508.0" mnemonicParsing="false" onAction="#saveClicked" text="Save" />
+      <Button fx:id="cancelButton" layoutX="410.0" layoutY="508.0" mnemonicParsing="false" onAction="#cancelClicked" text="Cancel" />
+   </children>
+</AnchorPane>
